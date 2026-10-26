@@ -1,8 +1,10 @@
 # LINEメッセージ送信（LINE Message Sender）
 
-Difyのワークフロー・チャットフローから、[LINE Messaging API](https://developers.line.biz/ja/docs/messaging-api/overview/) を使ってLINEへメッセージを送信するプラグインです。
+**Languages**: [English](README.md) | [日本語](README.ja.md)
 
-> ※株式会社シャイオス（shineos）が提供するコミュニティプラグインです。LINE株式会社の公式プラグインではありません。
+[Dify](https://dify.ai) のワークフローから、[LINE Messaging API](https://developers.line.biz/ja/docs/messaging-api/overview/) を使ってLINEユーザー・グループへメッセージを送信するDifyプラグインです。
+
+> ※株式会社シャイオス（[shineos](https://shineos.com)）が提供するコミュニティプラグインです。LINE株式会社の公式プラグインではありません。
 
 ## 提供するツール
 
@@ -21,7 +23,7 @@ Difyのワークフロー・チャットフローから、[LINE Messaging API](h
 
 1. [LINE Developersコンソール](https://developers.line.biz/console/) で **Messaging APIチャネル** を作成します（LINE公式アカウントが必要。無料プランで開始できます）。
 2. チャネルの「**Messaging API**」タブで**長期のチャネルアクセストークン**を発行します。
-3. Difyで本プラグインをインストールし、「ツール → LINE Messaging API」でトークンを登録します。
+3. Difyで本プラグインをインストールし、「ツール → LINE Message Sender」でトークンを登録します。
 4. 「ボット情報取得」を一度実行して、接続を確認します。
 
 注意:
@@ -32,9 +34,10 @@ Difyのワークフロー・チャットフローから、[LINE Messaging API](h
 
 ## プライバシー
 
-[PRIVACY.md](../PRIVACY.md) を参照してください。チャネルアクセストークンはDifyワークスペース内に保存され、プラグインは `api.line.me` にのみリクエストを送信します。
+[PRIVACY.md](PRIVACY.md) を参照してください。チャネルアクセストークンはDifyワークスペース内に保存され、プラグインは `api.line.me` にのみリクエストを送信します。
 
 ## 提供元
 
 - 株式会社シャイオス（shineos）— https://shineos.com
+- ソースコード: https://github.com/Shineos/dify-line-message-sender
 - LINE Messaging API リファレンス: https://developers.line.biz/ja/reference/messaging-api/

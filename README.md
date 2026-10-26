@@ -1,8 +1,10 @@
 # LINE Message Sender
 
-Send push and broadcast messages to LINE from your Dify workflows, using the [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
+**Languages**: [English](README.md) | [日本語](README.ja.md)
 
-> Note: This is a community plugin by shineos. It is not an official LINE product.
+A [Dify](https://dify.ai) plugin that sends push and broadcast messages to LINE users and groups, right from your Dify workflows — via the [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
+
+> Note: This is a community plugin by [shineos](https://shineos.com). It is not an official LINE product.
 
 ## Features
 
@@ -21,7 +23,7 @@ Send push and broadcast messages to LINE from your Dify workflows, using the [LI
 
 1. Create a **Messaging API channel** on the [LINE Developers Console](https://developers.line.biz/console/) (requires a LINE Official Account; the free plan works).
 2. On the channel's **Messaging API** tab, issue a **long-lived channel access token**.
-3. In Dify, install this plugin, open **Tools → LINE Messaging API**, and paste the token as *Channel access token*.
+3. In Dify, install this plugin, open **Tools → LINE Message Sender**, and paste the token as *Channel access token*.
 4. Use **Get Bot Info** once to confirm the connection works.
 
 Notes:
