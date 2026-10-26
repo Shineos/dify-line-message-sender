@@ -1,6 +1,11 @@
-# LINE Message Sender
+<div align="center">
 
-**Languages**: [English](README.md) | [日本語](README.ja.md)
+  [![README in English](https://img.shields.io/badge/English-06C755)](./README.md)
+  [![日本語のREADME](https://img.shields.io/badge/日本語-d9d9d9)](./README.ja.md)
+
+</div>
+
+# LINE Message Sender
 
 A [Dify](https://dify.ai) plugin that sends push and broadcast messages to LINE users and groups, right from your Dify workflows — via the [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
 

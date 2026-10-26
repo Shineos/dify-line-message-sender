@@ -1,6 +1,11 @@
-# LINEメッセージ送信（LINE Message Sender）
+<div align="center">
 
-**Languages**: [English](README.md) | [日本語](README.ja.md)
+  [![README in English](https://img.shields.io/badge/English-d9d9d9)](./README.md)
+  [![日本語のREADME](https://img.shields.io/badge/日本語-06C755)](./README.ja.md)
+
+</div>
+
+# LINEメッセージ送信（LINE Message Sender）
 
 [Dify](https://dify.ai) のワークフローから、[LINE Messaging API](https://developers.line.biz/ja/docs/messaging-api/overview/) を使ってLINEユーザー・グループへメッセージを送信するDifyプラグインです。
 
