@@ -1,0 +1,41 @@
+# LINE Message Sender
+
+Send push and broadcast messages to LINE from your Dify workflows, using the [LINE Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/).
+
+> Note: This is a community plugin by shineos. It is not an official LINE product.
+
+## Features
+
+- **Send Push Message** — send a text message to a specific LINE user, group, or room
+- **Send Broadcast Message** — send a text message to all friends of your LINE Official Account
+- **Get User Profile** — fetch a LINE user's display name, user ID, picture URL, and status message
+- **Get Bot Info** — fetch your LINE Official Account's information (useful as a connection test)
+
+## Typical use cases
+
+- Notify workflow results (daily reports, monitoring alerts, form submissions) to LINE users or groups
+- Broadcast announcements from a Dify workflow on a schedule
+- Look up a LINE user's profile before composing a personalized reply
+
+## Setup
+
+1. Create a **Messaging API channel** on the [LINE Developers Console](https://developers.line.biz/console/) (requires a LINE Official Account; the free plan works).
+2. On the channel's **Messaging API** tab, issue a **long-lived channel access token**.
+3. In Dify, install this plugin, open **Tools → LINE Messaging API**, and paste the token as *Channel access token*.
+4. Use **Get Bot Info** once to confirm the connection works.
+
+Notes:
+
+- Push messages only reach users who are friends of the bot, and group/room IDs only work while the bot is in that group/room.
+- Recipient IDs look like `U...` (user), `C...` (group), `R...` (room).
+- Broadcast messages count toward your LINE plan's monthly message quota.
+
+## Privacy
+
+See [PRIVACY.md](PRIVACY.md). The plugin stores your channel access token in your Dify workspace and sends requests only to `api.line.me`.
+
+## Questions
+
+- Maintainer: shineos — https://shineos.com
+- Source code: https://github.com/Shineos/dify-line-messaging-api
+- LINE Messaging API reference: https://developers.line.biz/en/reference/messaging-api/

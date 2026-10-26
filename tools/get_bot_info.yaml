@@ -1,0 +1,18 @@
+identity:
+  name: "get_bot_info"
+  author: "shineos"
+  label:
+    en_US: "Get Bot Info"
+    ja_JP: "ボット情報取得"
+    zh_Hans: "Get Bot Info"
+    pt_BR: "Get Bot Info"
+description:
+  human:
+    en_US: "Get information about the LINE Official Account (bot) linked to the channel access token, such as its basic ID and display name. Useful for testing the connection."
+    ja_JP: "チャネルアクセストークンに紐づくLINE公式アカウント（ボット）の情報（基本ID・表示名など）を取得します。接続テストにも使えます。"
+    zh_Hans: "Get information about the LINE Official Account linked to the token."
+    pt_BR: "Get information about the LINE Official Account linked to the token."
+  llm: "Get information about the LINE Official Account (bot) linked to the channel access token, including its basic ID and display name. Takes no inputs."
+extra:
+  python:
+    source: "tools/get_bot_info.py"

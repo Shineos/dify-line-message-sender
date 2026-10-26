@@ -1,0 +1,34 @@
+identity:
+  name: "get_profile"
+  author: "shineos"
+  label:
+    en_US: "Get User Profile"
+    ja_JP: "ユーザープロフィール取得"
+    zh_Hans: "Get User Profile"
+    pt_BR: "Get User Profile"
+description:
+  human:
+    en_US: "Get the display name, user ID, profile photo URL, and status message of a LINE user. The bot must be a friend of the user."
+    ja_JP: "LINEユーザーの表示名・ユーザーID・プロフィール画像URL・ステータスメッセージを取得します。ボットがそのユーザーの友だちである必要があります。"
+    zh_Hans: "Get the profile of a LINE user."
+    pt_BR: "Get the profile of a LINE user."
+  llm: "Get the profile of a LINE user (display name, user ID, picture URL, status message). Input: 'user_id' is the LINE user ID starting with 'U'."
+parameters:
+  - name: "user_id"
+    type: "string"
+    required: true
+    label:
+      en_US: "User ID"
+      ja_JP: "ユーザーID"
+      zh_Hans: "User ID"
+      pt_BR: "User ID"
+    human_description:
+      en_US: "LINE user ID (starts with 'U')."
+      ja_JP: "LINEユーザーID（Uで始まる）。"
+      zh_Hans: "LINE user ID."
+      pt_BR: "LINE user ID."
+    llm_description: "The LINE user ID whose profile to fetch. Starts with 'U'."
+    form: "llm"
+extra:
+  python:
+    source: "tools/get_profile.py"

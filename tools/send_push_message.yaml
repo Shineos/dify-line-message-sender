@@ -1,0 +1,64 @@
+identity:
+  name: "send_push_message"
+  author: "shineos"
+  label:
+    en_US: "Send Push Message"
+    ja_JP: "メッセージ送信（個別）"
+    zh_Hans: "Send Push Message"
+    pt_BR: "Send Push Message"
+description:
+  human:
+    en_US: "Send a text message to a specific LINE user, group, or room (push message). The bot must be a friend of the user or a member of the group/room."
+    ja_JP: "特定のLINEユーザー・グループ・トークルームへテキストメッセージを送信します（プッシュメッセージ）。ボットがユーザーの友だち、またはグループ・トークルームのメンバーである必要があります。"
+    zh_Hans: "Send a text message to a specific LINE user, group, or room."
+    pt_BR: "Send a text message to a specific LINE user, group, or room."
+  llm: "Send a text message to a specific LINE user, group, or room via push message. Inputs: 'to' is the recipient ID (starts with U for user, C for group, R for room), 'message_text' is the text to send."
+parameters:
+  - name: "to"
+    type: "string"
+    required: true
+    label:
+      en_US: "Recipient ID"
+      ja_JP: "宛先ID"
+      zh_Hans: "Recipient ID"
+      pt_BR: "Recipient ID"
+    human_description:
+      en_US: "LINE ID of the recipient: user ID (starts with 'U'), group ID (starts with 'C'), or room ID (starts with 'R')."
+      ja_JP: "送信先のLINE ID。ユーザーID（Uで始まる）、グループID（Cで始まる）、トークルームID（Rで始まる）のいずれか。"
+      zh_Hans: "LINE ID of the recipient."
+      pt_BR: "LINE ID of the recipient."
+    llm_description: "The LINE ID of the message recipient. User IDs start with 'U', group IDs with 'C', room IDs with 'R'."
+    form: "llm"
+  - name: "message_text"
+    type: "string"
+    required: true
+    label:
+      en_US: "Message text"
+      ja_JP: "メッセージ本文"
+      zh_Hans: "Message text"
+      pt_BR: "Message text"
+    human_description:
+      en_US: "Text to send (up to 5,000 characters)."
+      ja_JP: "送信するテキスト（最大5,000文字）。"
+      zh_Hans: "Text to send."
+      pt_BR: "Text to send."
+    llm_description: "The text message to send to the recipient, up to 5,000 characters."
+    form: "llm"
+  - name: "notification_disabled"
+    type: "boolean"
+    required: false
+    label:
+      en_US: "Disable notification"
+      ja_JP: "通知をオフにする"
+      zh_Hans: "Disable notification"
+      pt_BR: "Disable notification"
+    human_description:
+      en_US: "If true, the message arrives silently (no push notification on the recipient's device)."
+      ja_JP: "trueにすると、受信端末に通知されずにメッセージが届きます。"
+      zh_Hans: "If true, the message arrives silently."
+      pt_BR: "If true, the message arrives silently."
+    llm_description: "Set true to send the message silently without a push notification."
+    form: "form"
+extra:
+  python:
+    source: "tools/send_push_message.py"

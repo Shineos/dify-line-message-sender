@@ -1,0 +1,49 @@
+identity:
+  name: "send_broadcast_message"
+  author: "shineos"
+  label:
+    en_US: "Send Broadcast Message"
+    ja_JP: "メッセージ送信（全員）"
+    zh_Hans: "Send Broadcast Message"
+    pt_BR: "Send Broadcast Message"
+description:
+  human:
+    en_US: "Send a text message to all friends of your LINE Official Account (broadcast). Messages count toward your LINE plan's monthly free quota."
+    ja_JP: "LINE公式アカウントの友だち全員へテキストメッセージを一斉送信します（ブロードキャスト）。送信数はLINEプランの無料枠にカウントされます。"
+    zh_Hans: "Send a text message to all friends of your LINE Official Account."
+    pt_BR: "Send a text message to all friends of your LINE Official Account."
+  llm: "Broadcast a text message to all friends of the LINE Official Account. Input: 'message_text' is the text to send."
+parameters:
+  - name: "message_text"
+    type: "string"
+    required: true
+    label:
+      en_US: "Message text"
+      ja_JP: "メッセージ本文"
+      zh_Hans: "Message text"
+      pt_BR: "Message text"
+    human_description:
+      en_US: "Text to broadcast (up to 5,000 characters)."
+      ja_JP: "送信するテキスト（最大5,000文字）。"
+      zh_Hans: "Text to broadcast."
+      pt_BR: "Text to broadcast."
+    llm_description: "The text message to broadcast to all friends of the LINE Official Account, up to 5,000 characters."
+    form: "llm"
+  - name: "notification_disabled"
+    type: "boolean"
+    required: false
+    label:
+      en_US: "Disable notification"
+      ja_JP: "通知をオフにする"
+      zh_Hans: "Disable notification"
+      pt_BR: "Disable notification"
+    human_description:
+      en_US: "If true, the message arrives silently (no push notification on recipients' devices)."
+      ja_JP: "trueにすると、受信端末に通知されずにメッセージが届きます。"
+      zh_Hans: "If true, the message arrives silently."
+      pt_BR: "If true, the message arrives silently."
+    llm_description: "Set true to broadcast the message silently without a push notification."
+    form: "form"
+extra:
+  python:
+    source: "tools/send_broadcast_message.py"
