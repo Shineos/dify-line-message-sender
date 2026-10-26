@@ -1,7 +1,7 @@
-version: 0.0.9
+version: 0.1.0
 type: plugin
 author: shineos
-name: line-messaging-api
+name: line-message-sender
 label:
   en_US: LINE Message Sender
   ja_JP: LINEメッセージ送信
@@ -21,7 +21,7 @@ resource:
       enabled: true
 plugins:
   tools:
-    - provider/line-messaging-api.yaml
+    - provider/line-message-sender.yaml
 meta:
   version: 0.0.1
   arch:

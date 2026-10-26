@@ -9,7 +9,7 @@ from dify_plugin.errors.tool import ToolProviderCredentialValidationError
 API_BASE = "https://api.line.me"
 
 
-class LineMessagingApiProvider(ToolProvider):
+class LineMessageSenderProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         token = (credentials or {}).get("channel_access_token") or ""
         if not token.strip():

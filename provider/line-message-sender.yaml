@@ -1,14 +1,14 @@
 identity:
   author: "shineos"
-  name: "line-messaging-api"
+  name: "line-message-sender"
   label:
     en_US: "LINE Message Sender"
     ja_JP: "LINEメッセージ送信"
     zh_Hans: "LINE Message Sender"
     pt_BR: "LINE Message Sender"
   description:
-    en_US: "Send push and broadcast messages to LINE users and groups from Dify workflows via the official LINE Messaging API."
-    ja_JP: "LINE公式アカウントのMessaging APIで、DifyのワークフローからLINEユーザー・グループへメッセージを送信します。"
+    en_US: "Send push and broadcast messages to LINE users and groups from Dify workflows via the LINE Messaging API."
+    ja_JP: "LINEのMessaging APIで、DifyのワークフローからLINEユーザー・グループへメッセージを送信します。"
     zh_Hans: "Send messages to LINE via the LINE Messaging API"
     pt_BR: "Send messages to LINE via the LINE Messaging API"
   icon: "icon.svg"
@@ -42,4 +42,4 @@ tools:
 
 extra:
   python:
-    source: provider/line-messaging-api.py
+    source: provider/line-message-sender.py
