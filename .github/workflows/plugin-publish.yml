@@ -98,6 +98,7 @@ jobs:
           # 2. Go to the target repository -> Settings -> Secrets and variables -> Actions -> New repository secret -> Add the token as PLUGIN_ACTION
           GH_TOKEN: ${{ secrets.PLUGIN_ACTION }}
         run: |
+          BRANCH_NAME="bump-${{ steps.get_basic_info.outputs.plugin_name }}-plugin-${{ steps.get_basic_info.outputs.version }}"
           gh pr create \
             --repo langgenius/dify-plugins \
             --head "Shineos:$BRANCH_NAME" \
@@ -107,3 +108,10 @@ jobs:
 
             Changes:
             - Updated plugin package file" || echo "PR already exists or creation skipped." # Handle cases where PR already exists
+
+      - name: Upload package to release
+        env:
+          GH_TOKEN: ${{ secrets.PLUGIN_ACTION }}
+        run: |
+          PACKAGE_NAME="${{ steps.get_basic_info.outputs.plugin_name }}-${{ steps.get_basic_info.outputs.version }}.difypkg"
+          gh release upload "${{ github.event.release.tag_name }}" "dify-plugins/${{ steps.get_basic_info.outputs.author }}/${{ steps.get_basic_info.outputs.plugin_name }}/$PACKAGE_NAME" --clobber -R "$GITHUB_REPOSITORY"
