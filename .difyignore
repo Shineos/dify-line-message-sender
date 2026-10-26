@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Tests and development files (excluded from the packaged plugin)
+tests/
+pytest.ini
+requirements-dev.txt
+.pytest_cache/
+
 # Distribution / packaging
 .Python
 build/

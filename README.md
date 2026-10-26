@@ -37,6 +37,23 @@ Notes:
 - Recipient IDs look like `U...` (user), `C...` (group), `R...` (room).
 - Broadcast messages count toward your LINE plan's monthly message quota.
 
+## Build and test
+
+Python 3.12 is required. Install runtime and test dependencies, then run the offline test suite:
+
+```sh
+python -m pip install -r requirements-dev.txt
+python -m pytest tests -q
+```
+
+To build an installable package with the Dify plugin CLI, run this from the parent directory:
+
+```sh
+dify plugin package ./line-message-sender
+```
+
+The package contains the plugin runtime and documentation. Tests and development scripts are excluded by `.difyignore`.
+
 ## Privacy
 
 See [PRIVACY.md](PRIVACY.md). The plugin stores your channel access token in your Dify workspace and sends requests only to `api.line.me`.
