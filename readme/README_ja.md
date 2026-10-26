@@ -1,3 +1,5 @@
+**Languages**: [English](../README.md) | 日本語（本ファイル）
+
 # LINEメッセージ送信（LINE Message Sender）
 
 [Dify](https://dify.ai) のワークフローから、[LINE Messaging API](https://developers.line.biz/ja/docs/messaging-api/overview/) を使ってLINEユーザー・グループへメッセージを送信するDifyプラグインです。
