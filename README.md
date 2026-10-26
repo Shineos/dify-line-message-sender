@@ -37,5 +37,5 @@ See [PRIVACY.md](PRIVACY.md). The plugin stores your channel access token in you
 ## Questions
 
 - Maintainer: shineos — https://shineos.com
-- Source code: https://github.com/Shineos/dify-line-messaging-api
+- Source code: https://github.com/Shineos/dify-line-message-sender
 - LINE Messaging API reference: https://developers.line.biz/en/reference/messaging-api/
