@@ -54,6 +54,10 @@ dify plugin package ./line-message-sender
 
 The package contains the plugin runtime and documentation. Tests and development scripts are excluded by `.difyignore`.
 
+## Troubleshooting
+
+**Tools fail with empty credentials (`keys=[]`) in an imported workflow** — a Dify-side quirk on self-hosted 1.16–1.18: tool nodes whose `provider_type` is `"plugin"` skip credential loading. If you import a workflow via DSL, make sure the tool nodes use `provider_type: "builtin"` (the UI writes this value automatically when you add nodes by hand). Credential setup itself is unchanged: authorize once in **Tools → LINE Message Sender**.
+
 ## Privacy
 
 See [PRIVACY.md](PRIVACY.md). The plugin stores your channel access token in your Dify workspace and sends requests only to `api.line.me`.
