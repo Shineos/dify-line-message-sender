@@ -1,7 +1,7 @@
 <div align="center">
 
   [![README in English](https://img.shields.io/badge/English-06C755)](./README.md)
-  [![日本語のREADME](https://img.shields.io/badge/日本語-d9d9d9)](./readme/README_ja.md)
+  [![README in Japanese](https://img.shields.io/badge/Japanese-d9d9d9)](./readme/README_ja.md)
 
 </div>
 

@@ -2,6 +2,8 @@ version: 0.1.0
 type: plugin
 author: shineos
 name: line-message-sender
+repo: https://github.com/Shineos/dify-line-message-sender
+contact: koushaku.tei@shineos.com
 label:
   en_US: LINE Message Sender
   ja_JP: LINEメッセージ送信
