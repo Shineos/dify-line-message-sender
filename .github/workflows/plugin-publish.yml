@@ -64,7 +64,7 @@ jobs:
           fetch-depth: 1
           persist-credentials: true
 
-      - name: Prepare and create PR
+      - name: Prepare and push release branch
         run: |
           PACKAGE_NAME="${{ steps.get_basic_info.outputs.plugin_name }}-${{ steps.get_basic_info.outputs.version }}.difypkg"
           mkdir -p dify-plugins/${{ steps.get_basic_info.outputs.author }}/${{ steps.get_basic_info.outputs.plugin_name }}
@@ -91,23 +91,9 @@ jobs:
           echo "Waiting for branch to sync..."
           sleep 10  # Wait 10 seconds for branch sync
 
-      - name: Create PR via GitHub API
-        env:
-          # How to config the token:
-          # 1. Profile -> Settings -> Developer settings -> Personal access tokens -> Generate new token (with repo scope) -> Copy the token
-          # 2. Go to the target repository -> Settings -> Secrets and variables -> Actions -> New repository secret -> Add the token as PLUGIN_ACTION
-          GH_TOKEN: ${{ secrets.PLUGIN_ACTION }}
-        run: |
-          BRANCH_NAME="bump-${{ steps.get_basic_info.outputs.plugin_name }}-plugin-${{ steps.get_basic_info.outputs.version }}"
-          gh pr create \
-            --repo langgenius/dify-plugins \
-            --head "Shineos:$BRANCH_NAME" \
-            --base main \
-            --title "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin to version ${{ steps.get_basic_info.outputs.version }}" \
-            --body "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin package to version ${{ steps.get_basic_info.outputs.version }}
-
-            Changes:
-            - Updated plugin package file" || echo "PR already exists or creation skipped." # Handle cases where PR already exists
+      # The PR to langgenius/dify-plugins is created manually so the submission
+      # body can be written per version (template: PR_TEMPLATE.md in the local
+      # dify-plugins workspace). The branch pushed above is the PR head branch.
 
       - name: Upload package to release
         env:
