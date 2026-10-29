@@ -79,11 +79,11 @@ jobs:
           git checkout main
           git pull origin main
 
-          BRANCH_NAME="bump-${{ steps.get_basic_info.outputs.plugin_name }}-plugin-${{ steps.get_basic_info.outputs.version }}"
+          BRANCH_NAME="update-${{ steps.get_basic_info.outputs.version }}"
           git checkout -b "$BRANCH_NAME"
 
           git add .
-          git commit -m "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin to version ${{ steps.get_basic_info.outputs.version }}"
+          git commit -m "update line-message-sender plugin to version ${{ steps.get_basic_info.outputs.version }}"
 
           git push -u origin "$BRANCH_NAME" --force
 
