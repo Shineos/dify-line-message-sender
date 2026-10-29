@@ -174,3 +174,8 @@ cython_debug/
 .DS_Store
 .AppleDouble
 .LSOverride
+# Agent/tool state directories (never commit)
+.mimosa/
+.v2c/
+.video_agent/
+.zcode/
